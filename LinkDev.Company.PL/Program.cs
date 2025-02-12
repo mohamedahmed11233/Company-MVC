@@ -1,6 +1,6 @@
 using LinkDev.Company.BLL.Services.Interfaces;
 using LinkDev.Company.BLL.Services.Repo;
-using LinkDev.Company.DAL.Persistance.Data;
+using LinkDev.Company.DAL.Persistance.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace LinkDev.Company.PL

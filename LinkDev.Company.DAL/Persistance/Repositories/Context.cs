@@ -7,16 +7,16 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkDev.Company.DAL.Persistance.Data
+namespace LinkDev.Company.DAL.Persistance.Repositories
 {
     public class Context : DbContext
     {
 
         public Context(DbContextOptions<Context> options) : base(options)
         {
-            
+
         }
-      
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,5 +25,6 @@ namespace LinkDev.Company.DAL.Persistance.Data
         }
 
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }

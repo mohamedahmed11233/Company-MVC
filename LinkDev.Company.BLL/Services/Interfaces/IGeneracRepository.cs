@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace LinkDev.Company.BLL.Services.Interfaces
 {
-    public interface IDepartmentRepositry
+    public interface IGeneracRepositor<T>where T : BaseModel
     {
-       
-
+        ICollection<T> GetAll();
+        T Get(int id);
+        int Add(T Tentity);
+        int Delete(T Tentity);
+        int Update(T TEntity);
     }
 }

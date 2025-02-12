@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkDev.Company.DAL.Persistance.Data
+namespace LinkDev.Company.DAL.Persistance.Data.Configrathions
 {
-    public class Configrathion : IEntityTypeConfiguration<Department>
+    public class EmployeeConfigrathions : IEntityTypeConfiguration<Employee>
     {
-        public void Configure(EntityTypeBuilder<Department> builder)
+        public void Configure(EntityTypeBuilder<Employee> builder)
         {
-            builder.Property(D => D.Id).UseIdentityColumn(10,10);
+            builder.Property(s=>s.Salary).HasMaxLength(50);
         }
     }
 }

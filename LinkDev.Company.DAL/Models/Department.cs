@@ -8,16 +8,15 @@ using System.Threading.Tasks;
 
 namespace LinkDev.Company.DAL.Models
 {
-    public class Department
+    public class Department:BaseModel
     {
-        public int Id { get; set; }
         [Required(ErrorMessage = "Code id Required !!")]
         public string Code { get; set; }
-        [Required(ErrorMessage = "Name id Required !!")]
 
-        public string Name { get; set; }
-        [DisplayName("Data Fo Creathion")]
+        [DisplayName("Date Of Creation")]
         public DateTime DateOfCreathion { get; set; }
+
+
 
     }
 }

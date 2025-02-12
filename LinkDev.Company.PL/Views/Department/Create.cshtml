@@ -1,0 +1,54 @@
+﻿@using LinkDev.Company.DAL.Models
+
+@model Department
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="mb-4">
+    <h1 class="pb-2">Create New Department</h1>
+    <p class="text-muted">Fill in the details below to add a new department to the system.</p>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <form asp-action="Create">
+            <!-- Validation Summary -->
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <!-- Code Field -->
+            <div class="mb-3">
+                <label asp-for="Code" class="form-label">Department Code</label>
+                <input asp-for="Code" class="form-control" placeholder="Enter a unique department code (e.g., 123)">
+                <span asp-validation-for="Code" class="text-danger"></span>
+            </div>
+
+            <!-- Name Field -->
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Department Name</label>
+                <input asp-for="Name" class="form-control" placeholder="Enter the department name (e.g., HR)">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <!-- Date Field -->
+            <div class="mb-3">
+                <label asp-for="DateOfCreathion" class="form-label">Date of Creation</label>
+                <input asp-for="DateOfCreathion" class="form-control" type="datetime-local">
+                <span asp-validation-for="DateOfCreathion" class="text-danger"></span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-check"></i> Submit
+                </button>
+                <a asp-action="Index" class="btn btn-dark">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="fas fa-times"></i> Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
