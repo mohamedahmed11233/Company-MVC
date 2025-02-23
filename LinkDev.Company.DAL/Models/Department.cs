@@ -16,6 +16,8 @@ namespace LinkDev.Company.DAL.Models
         [DisplayName("Date Of Creation")]
         public DateTime DateOfCreathion { get; set; }
 
+        public ICollection<Employee> employees { get; set; } = new HashSet<Employee>();
+
 
 
     }

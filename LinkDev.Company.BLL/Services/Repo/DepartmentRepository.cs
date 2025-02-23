@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace LinkDev.Company.BLL.Services.Repo
 {
-    public class DepartmentRepository : GenericRepository<Department>
+    public class DepartmentRepository : GenericRepository<Department>, IDepartmentRepositry
     {
         public DepartmentRepository(Context context) : base(context)
         {

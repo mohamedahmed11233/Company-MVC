@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LinkDev.Company.BLL.Services.Interfaces
 {
-    public interface IDepartmentRepositry
+    public interface IDepartmentRepositry:IGeneracRepositor<Department>
     {
        
 

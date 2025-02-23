@@ -9,7 +9,7 @@ namespace LinkDev.Company.BLL.Services.Interfaces
 {
     public interface IGeneracRepositor<T>where T : BaseModel
     {
-        ICollection<T> GetAll();
+        IEnumerable<T> GetAll();
         T Get(int id);
         int Add(T Tentity);
         int Delete(T Tentity);

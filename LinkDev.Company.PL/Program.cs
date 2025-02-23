@@ -21,6 +21,7 @@ namespace LinkDev.Company.PL
             });
 
             builder.Services.AddScoped<IDepartmentRepositry, DepartmentRepository>();
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             var app = builder.Build();
 

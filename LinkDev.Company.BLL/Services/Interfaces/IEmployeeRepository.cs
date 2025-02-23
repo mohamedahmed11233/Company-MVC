@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace LinkDev.Company.BLL.Services.Interfaces
 {
-    public interface IEmployeeRepository
+    public interface IEmployeeRepository :IGeneracRepositor<Employee>
     {
-       
+        IQueryable<Employee> GetEmpByName(string name);
+
     }
 }
